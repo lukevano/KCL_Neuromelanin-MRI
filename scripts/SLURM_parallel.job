@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#SBATCH --job-name=KCL_NM-MRI
+#SBATCH --output=/data/project/CARDS/kcl_nm/logs/KCL_NM-MRI_%j.out
+#SBATCH --export=none
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=2000
+#SBATCH --array=1-2
+
+# ================= SHELL Configuration ===================
+ 
+source /software/system/modules/latest/init/bash
+module use /software/system/modules/NaN/generic
+module purge
+module load nan
+
+# Load script dependent modules here
+module load fsl/6.0.5.2
+module load freesurfer
+
+# Activate virtual environment
+module load miniconda
+conda activate /home/k1754339/.conda/envs/kcl_nm
+
+# Set PATHs
+BASE_DIR=/data/project/CARDS/kcl_nm
+SUB_LIST=$BASE_DIR/scripts/subjects.txt
+SCRIPT=$BASE_DIR/scripts/main_script.py
+TMP_SUB_LIST="$BASE_DIR/scripts/subject_${SLURM_ARRAY_TASK_ID}.txt"  # Unique temp file for each job
+
+# Capture number of CPU threads from SLURM
+NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+# ================= SHELL Commands ========================
+
+echo "Running on $HOSTNAME" # Grid name
+echo "Array ID: $SLURM_ARRAY_JOB_ID" # Array ID
+echo "Task ID: $SLURM_ARRAY_TASK_ID" # Task Number (in array)
+
+# Get the Subject ID from the list
+SUB_ID="`awk FNR==$SLURM_ARRAY_TASK_ID $SUB_LIST`" # Task Number (in array)
+
+# Write subject ID into a temp file
+echo $SUB_ID > $TMP_SUB_LIST
+
+# Run Python script with the temp subject list file
+python $SCRIPT --nifti_dir /data/project/CARDS/kcl_nm/nifti --output_dir /data/project/CARDS/kcl_nm/output --templates_dir /data/project/CARDS/kcl_nm/templates --results_dir /data/project/CARDS/kcl_nm/results --subject_list $TMP_SUB_LIST --apply_robustfov True --num_threads $NUM_THREADS --interpolator genericLabel
+
+# Cleanup: Remove temp file after execution
+rm -f $TMP_SUB_LIST
+
+echo "Complete"

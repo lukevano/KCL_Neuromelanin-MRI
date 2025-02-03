@@ -1,0 +1,9 @@
+.nii.gz filter=lfs diff=lfs merge=lfs -text
+*.nii.gz filter=lfs diff=lfs merge=lfs -text
+**/*.nii.gz filter=lfs diff=lfs merge=lfs -text
+/Users/DrV/Documents/code/lukevano/KCL_Neuromelanin-MRI/output/sub-001/anat/sub-001_T1w_space-MNI152NLin2009cSym1InverseWarp.nii.gz filter=lfs diff=lfs merge=lfs -text
+/Users/DrV/Documents/code/lukevano/KCL_Neuromelanin-MRI/output/sub-001/anat/sub-001_T1w_space-MNI152NLin2009cSym1Warp.nii.gz filter=lfs diff=lfs merge=lfs -text
+/Users/DrV/Documents/code/lukevano/KCL_Neuromelanin-MRI/output/sub-002/anat/sub-002_T1w_space-MNI152NLin2009cSym1InverseWarp.nii.gz filter=lfs diff=lfs merge=lfs -text
+/Users/DrV/Documents/code/lukevano/KCL_Neuromelanin-MRI/output/sub-002/anat/sub-002_T1w_space-MNI152NLin2009cSym1Warp.nii.gz filter=lfs diff=lfs merge=lfs -text
+/Users/DrV/Documents/code/lukevano/KCL_Neuromelanin-MRI/output/sub-002/anat/sub-002_T1w_space-MNI152NLin2009cSym_Warped.nii.gz filter=lfs diff=lfs merge=lfs -text
+/Users/DrV/Documents/code/lukevano/KCL_Neuromelanin-MRI/output/sub-001/anat/sub-001_T1w_space-MNI152NLin2009cSym_Warped.nii.gz filter=lfs diff=lfs merge=lfs -text
