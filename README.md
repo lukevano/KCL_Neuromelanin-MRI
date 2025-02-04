@@ -1,5 +1,5 @@
-# **KCL_NM-MRI**  
-### **Neuromelanin-Sensitive MRI (NM-MRI) Analysis Pipeline & Midbrain Atlas**  
+# **KCL_Neuromelanin-MRI**  
+### **King's College London (KCL) Neuromelanin-Sensitive MRI (NM-MRI) Analysis Pipeline & Midbrain Atlas**  
 
 ![Midbrain Mask](templates/NM-MRI_image.png)  
 
@@ -19,7 +19,15 @@ This dataset and code were developed to examine case-control differences in **SN
 
 📚 Full study details, methods, and findings are available in [Biological Psychiatry](https://www.biologicalpsychiatryjournal.com/article/S0006-3223(24)01417-3/fulltext).  
 
-📌 If you use the data or code from this repository, **please cite the publication**.  
+📌 If you use the data or code from this repository, **please cite the publication**:
+Vano LJ, McCutcheon RA, Rutigliano G, et al.: Mesostriatal Dopaminergic Circuit Dysfunction in Schizophrenia: A Multimodal Neuromelanin-Sensitive Magnetic Resonance Imaging and [18F]-DOPA Positron Emission Tomography Study. Biological Psychiatry 2024; 96:674–683
+
+This analysis pipeline was developed based on methodologies from the [Horga Lab](https://www.columbiapsychiatry.org/research-labs/horga-lab), as outlined in:
+Cassidy CM, Zucca FA, Girgis RR, et al.: Neuromelanin-sensitive MRI as a noninvasive proxy measure of dopamine function in the human brain. Proc Natl Acad Sci U S A 2019; 116:5108–5117
+
+📧 For any inquiries, please contact:
+Dr. Luke Vano: drlukevano@gmail.com
+Prof. Oliver Howes: oliver.howes@kcl.ac.uk
 
 ---
 
@@ -141,9 +149,10 @@ Processed Output Files:
 ---
 
 ## **License**  
-This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.  
+This repository is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). See [LICENSE](LICENSE.md) for details.  
 
 ## **Citation**  
 If you use this repository, please cite:  
-📚 [Biological Psychiatry](https://www.biologicalpsychiatryjournal.com/article/S0006-3223(24)01417-3/fulltext)  
+📚 Vano LJ, McCutcheon RA, Rutigliano G, et al.: Mesostriatal Dopaminergic Circuit Dysfunction in Schizophrenia: A Multimodal Neuromelanin-Sensitive Magnetic Resonance Imaging and [18F]-DOPA Positron Emission Tomography Study. Biological Psychiatry 2024; 96:674–683
+[Biological Psychiatry](https://www.biologicalpsychiatryjournal.com/article/S0006-3223(24)01417-3/fulltext)  
 
