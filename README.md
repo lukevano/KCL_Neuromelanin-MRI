@@ -47,6 +47,8 @@ This repository follows a **BIDS-like format** and includes **unprocessed** and 
  ├📂 results/              # Subject SN-VTA NM-CNR results  
  ├📂 scripts/              # Code files & analysis scripts  
  ├📂 templates/            # Midbrain atlas (SN-VTA & CC masks), NM-MRI & QSM templates in MNI space  
+ │ ├── NM_case_over_cont_space-MNI152NLin2009cSym.nii.gz     # SN-VTA voxels where NM-CNR is significantly greater in schizophrenia than controls (as presented in [Biological Psychiatry](https://www.biologicalpsychiatryjournal.com/article/S0006-3223(24)01417-3/fulltext))  
+ │ └── NM_case_over_cont_space-MNI152NLin2009cAsym.nii.gz    # Same map in MNI152NLin2009cAsym space  
  ├📄 README.md             # Overview of the project  
  ├📄 LICENSE               # MIT open-source license  
  ├📄 requirements.txt      # Python dependencies  
